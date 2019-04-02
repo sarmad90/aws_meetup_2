@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Greeting Cards</h1>
+<hr>
+<%= link_to 'New Greeting Card', new_greeting_card_path, class: 'btn btn-primary' %>
+
+<br>
+<br>
+
+<table class="table table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Message</th>
+      <th>Sender name</th>
+      <th>Sender email</th>
+      <th>Recipient name</th>
+      <th>Recipient email</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @greeting_cards.each do |greeting_card| %>
+      <tr>
+        <td><%= greeting_card.title %></td>
+        <td><%= greeting_card.message %></td>
+        <td><%= greeting_card.sender_name %></td>
+        <td><%= greeting_card.sender_email %></td>
+        <td><%= greeting_card.recipient_name %></td>
+        <td><%= greeting_card.recipient_email %></td>
+        <td><%= greeting_card.status %></td>
+        <td><%= link_to 'Show', greeting_card %></td>
+        <td><%= link_to 'Edit', edit_greeting_card_path(greeting_card) %></td>
+        <td><%= link_to 'Destroy', greeting_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

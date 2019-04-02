@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @greeting_card.title %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @greeting_card.message %>
+</p>
+
+<p>
+  <strong>Sender name:</strong>
+  <%= @greeting_card.sender_name %>
+</p>
+
+<p>
+  <strong>Sender email:</strong>
+  <%= @greeting_card.sender_email %>
+</p>
+
+<p>
+  <strong>Recipient name:</strong>
+  <%= @greeting_card.recipient_name %>
+</p>
+
+<p>
+  <strong>Recipient email:</strong>
+  <%= @greeting_card.recipient_email %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @greeting_card.status %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag url_for(@greeting_card.image) if @greeting_card.image.attached? %>
+</p>
+
+<%= link_to 'Edit', edit_greeting_card_path(@greeting_card) %> |
+<%= link_to 'Back', greeting_cards_path %>

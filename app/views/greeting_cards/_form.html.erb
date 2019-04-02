@@ -1,0 +1,52 @@
+<%= form_with(model: greeting_card, local: true) do |form| %>
+  <% if greeting_card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(greeting_card.errors.count, "error") %> prohibited this greeting_card from being saved:</h2>
+
+      <ul>
+      <% greeting_card.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message %>
+    <%= form.text_area :message %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sender_name %>
+    <%= form.text_field :sender_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sender_email %>
+    <%= form.text_field :sender_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recipient_name %>
+    <%= form.text_field :recipient_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recipient_email %>
+    <%= form.text_field :recipient_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

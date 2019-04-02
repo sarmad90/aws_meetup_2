@@ -1,0 +1,2 @@
+module GreetingCardsHelper
+end
