@@ -1,0 +1,5 @@
+logfile: ./log/shoryuken.log
+delay: 0
+concurrency: 15
+queues:
+  - [default, 1]
