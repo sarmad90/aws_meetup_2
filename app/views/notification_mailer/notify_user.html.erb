@@ -1,0 +1,11 @@
+<h1><%= @greeting_card.title %></h1>
+
+<p>
+  Hi <%= @greeting_card.recipient_name %> (<%= @greeting_card.recipient_email %>), you've received a greeting card from <%= @greeting_card.sender_name %> (<%= @greeting_card.sender_email %>).
+</p>
+
+<%= image_tag url_for(@greeting_card.image) if @greeting_card.image.attached? %>
+
+<p><b>Message: </b> <%= @greeting_card.message %></p>
+
+<p>Greeting Card Application Team</p>
