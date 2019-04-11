@@ -13,7 +13,6 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   config.active_job.queue_adapter     = :shoryuken
-  config.active_job.queue_name_prefix = "aws-meetup-2_#{Rails.env}"
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
