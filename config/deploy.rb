@@ -63,7 +63,7 @@ set :shoryuken_log,            -> { File.join(shared_path, 'log', 'shoryuken.log
 set :shoryuken_config,         -> { File.join(release_path, 'config', 'shoryuken.yml') }
 set :shoryuken_requires,       -> { [] }
 set :shoryuken_options,        -> { ['--rails'] }
-set :shoryuken_queues,         -> { [] }
+set :shoryuken_queues,         -> { ['default'] }
 set :shoryuken_role,           :app
 
 set :assets_roles, [:web, :app]
