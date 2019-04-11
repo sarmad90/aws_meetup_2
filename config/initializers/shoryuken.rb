@@ -17,3 +17,6 @@ Shoryuken.options[:aws][:secret_access_key] = credentials[:aws][:secret_access_k
 Shoryuken.options[:logfile] = "./log/shoryuken.log"
 Shoryuken.add_group('default', 25)
 puts "Shoryuken Configured"
+
+# use this command to start shoryuken
+# bundle exec shoryuken -R -C ~/projects/aws_meetup_2/config/shoryuken.yml -L ~/projects/aws_meetup_2/log/shoryuken.log
