@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/joekhoobyar/capistrano-shoryuken.git
+  revision: 40e9d53a6d0d16a04b4bf1303770e56fbb482381
+  specs:
+    capistrano-shoryuken (0.1.5)
+      capistrano
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -258,6 +265,7 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   capistrano-rvm
+  capistrano-shoryuken!
   capistrano3-puma
   capybara (>= 2.15)
   chromedriver-helper

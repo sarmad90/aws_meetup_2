@@ -54,6 +54,18 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
 
+# Shoryuken config
+set :shoryuken_default_hooks,  true
+
+set :shoryuken_pid,            -> { File.join(shared_path, 'tmp', 'pids', 'shoryuken.pid') }
+set :shoryuken_env,            -> { fetch(:rack_env, fetch(:rails_env, fetch(:stage))) }
+set :shoryuken_log,            -> { File.join(shared_path, 'log', 'shoryuken.log') }
+set :shoryuken_config,         -> { File.join(release_path, 'config', 'shoryuken.yml') }
+set :shoryuken_requires,       -> { [] }
+set :shoryuken_options,        -> { ['--rails'] }
+set :shoryuken_queues,         -> { [] }
+set :shoryuken_role,           :app
+
 set :assets_roles, [:web, :app]
 set :migration_role, :app
 set :migration_servers, -> { primary(fetch(:migration_role)) }
