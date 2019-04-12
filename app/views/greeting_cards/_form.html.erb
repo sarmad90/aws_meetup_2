@@ -13,40 +13,41 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :message %>
-    <%= form.text_area :message %>
+    <%= form.text_area :message, class: 'form-control' %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :sender_name %>
-    <%= form.text_field :sender_name %>
+    <%= form.text_field :sender_name, class: 'form-control' %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :sender_email %>
-    <%= form.text_field :sender_email %>
+    <%= form.text_field :sender_email, class: 'form-control' %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :recipient_name %>
-    <%= form.text_field :recipient_name %>
+    <%= form.text_field :recipient_name, class: 'form-control' %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :recipient_email %>
-    <%= form.text_field :recipient_email %>
+    <%= form.text_field :recipient_email, class: 'form-control' %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class: 'form-control' %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class: 'btn btn-primary' %>
   </div>
 <% end %>
+<br>
