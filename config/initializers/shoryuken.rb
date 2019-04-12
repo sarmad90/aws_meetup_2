@@ -21,3 +21,4 @@ puts "Shoryuken Configured"
 # use this command to start shoryuken
 # bundle exec shoryuken -R -C ~/projects/aws_meetup_2/config/shoryuken.yml -L ~/projects/aws_meetup_2/log/shoryuken.log
 # RAILS_ENV=production bundle exec shoryuken -R -C ~/aws_meetup_2/current/config/shoryuken.yml -L ~/aws_meetup_2/shared/log/shoryuken.log
+# RAILS_ENV=production bundle exec shoryuken --rails --daemon --logfile ~/aws_meetup_2/shared/log/shoryuken.log --config ~/aws_meetup_2/current/config/shoryuken.yml --pidfile ~/aws_meetup_2/shared/tmp/pids/shoryuken.pid
