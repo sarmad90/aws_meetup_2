@@ -29,7 +29,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-gem 'capistrano-shoryuken', group: :development
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -59,6 +59,7 @@ group :development do
   gem "capistrano-bundler", require: false
   gem "capistrano-rvm"
   gem "capistrano-rails", require: false
+  gem 'capistrano-shoryuken'
 end
 
 group :test do
